@@ -1,455 +1,185 @@
 <!DOCTYPE html>
-<html lang="en" class=" is-copy-enabled is-u2f-enabled">
-  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Language" content="en">
-    <meta name="viewport" content="width=1020">
-    <meta content="origin-when-cross-origin" name="referrer" />
+<html>
     
-    <title>SSH keys</title>
-    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
-    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png">
-    <meta property="fb:app_id" content="1401488693436528">
-
-      <meta property="og:url" content="https://github.com">
-      <meta property="og:site_name" content="GitHub">
-      <meta property="og:title" content="Build software better, together">
-      <meta property="og:description" content="GitHub is where people build software. More than 12 million people use GitHub to discover, fork, and contribute to over 31 million projects.">
-      <meta property="og:image" content="https://assets-cdn.github.com/images/modules/open_graph/github-logo.png">
-      <meta property="og:image:type" content="image/png">
-      <meta property="og:image:width" content="1200">
-      <meta property="og:image:height" content="1200">
-      <meta property="og:image" content="https://assets-cdn.github.com/images/modules/open_graph/github-mark.png">
-      <meta property="og:image:type" content="image/png">
-      <meta property="og:image:width" content="1200">
-      <meta property="og:image:height" content="620">
-      <meta property="og:image" content="https://assets-cdn.github.com/images/modules/open_graph/github-octocat.png">
-      <meta property="og:image:type" content="image/png">
-      <meta property="og:image:width" content="1200">
-      <meta property="og:image:height" content="620">
-      <meta property="twitter:site" content="github">
-      <meta property="twitter:site:id" content="13334762">
-      <meta property="twitter:creator" content="github">
-      <meta property="twitter:creator:id" content="13334762">
-      <meta property="twitter:card" content="summary_large_image">
-      <meta property="twitter:title" content="GitHub">
-      <meta property="twitter:description" content="GitHub is where people build software. More than 12 million people use GitHub to discover, fork, and contribute to over 31 million projects.">
-      <meta property="twitter:image:src" content="https://assets-cdn.github.com/images/modules/open_graph/github-logo.png">
-      <meta property="twitter:image:width" content="1200">
-      <meta property="twitter:image:height" content="1200">
-      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
-    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
-    <link rel="assets" href="https://assets-cdn.github.com/">
-    <link rel="web-socket" href="wss://live.github.com/_sockets/NjY3NTA1NDoyNTYyOTRhMThjNWViMzZjYmMwODUzM2JhMDg5NWJhMDo2YmZiYzc3Y2U4MWY2MmY2NTE4NDMwZjM3ZjM4YTRkZjY2YmJkYWM1YWM4NWM4MmE0ZDZhZWYwYzQwY2QxNjc0--cf50a4fa14cf19d2cb059ad7bd2a3733d40ade51">
-    <meta name="pjax-timeout" content="1000">
-    <link rel="sudo-modal" href="/sessions/sudo_modal">
-
-    <meta name="msapplication-TileImage" content="/windows-tile.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="selected-link" value="/settings/ssh" data-pjax-transient>
-
-    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
-    <meta name="google-analytics" content="UA-3769691-2">
-
-<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="6CD2593C:2F2C:1CBA7BC:569A7E98" name="octolytics-dimension-request_id" /><meta content="6675054" name="octolytics-actor-id" /><meta content="bfrost92" name="octolytics-actor-login" /><meta content="022e2db08e24ed81ced257b9008ec9c42c22a0b2a7fa927c27a7f65546ab72f8" name="octolytics-actor-hash" />
-
-<meta content="Rails, view, settings#user_ssh" data-pjax-transient="true" name="analytics-event" />
-
-
-  <meta class="js-ga-set" name="dimension1" content="Logged In">
-
-
-
-        <meta name="hostname" content="github.com">
-    <meta name="user-login" content="bfrost92">
-
-        <meta name="expected-hostname" content="github.com">
-
-      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
-      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-
-    <meta content="5856e065c55725b5e5f0504738767101dc988f6e" name="form-nonce" />
-
-    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-e9bcbd2b27a6b792794dfc31fff5f4f8e7245c761ddb1a44cb19b6a6cc5e4ff7.css" integrity="sha256-6by9Kyemt5J5Tfwx//X0+OckXHYd2xpEyxm2psxeT/c=" media="all" rel="stylesheet" />
-    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2-70af51f1bed4904749e6ef486ad11871c8ce4361ac82bb5f96a090b7f5346580.css" integrity="sha256-cK9R8b7UkEdJ5u9IatEYccjOQ2GsgrtflqCQt/U0ZYA=" media="all" rel="stylesheet" />
-    
-    
-
-
-    <meta http-equiv="x-pjax-version" content="33df7816266be22aad9db35bc85c5c41">
-
-      <meta name="description" content="GitHub is where people build software. More than 12 million people use GitHub to discover, fork, and contribute to over 31 million projects.">
-  </head>
-
-
-  <body class="logged_in   env-production windows">
-    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
-
-    
-    
-    
-
-
-
-      <div class="header header-logged-in true" role="banner">
-  <div class="container clearfix">
-
-    <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
-  <span aria-hidden="true" class="mega-octicon octicon-mark-github"></span>
-</a>
-
-
-      <div class="site-search  js-site-search" role="search">
-          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
-  <label class="js-chromeless-input-container form-control">
-    <div class="scope-badge">This repository</div>
-    <input type="text"
-      class="js-site-search-focus  chromeless-input"
-      data-hotkey="s"
-      name="q"
-      placeholder="Search GitHub"
-      aria-label="Search GitHub"
-      data-global-scope-placeholder="Search GitHub"
-      data-repo-scope-placeholder="Search"
-      tabindex="1"
-      autocapitalize="off">
-  </label>
-</form>
-      </div>
-
-      <ul class="header-nav left" role="navigation">
-        <li class="header-nav-item">
-          <a href="/pulls" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:pulls context:user" data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls">
-            Pull requests
-</a>        </li>
-        <li class="header-nav-item">
-          <a href="/issues" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:issues context:user" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues">
-            Issues
-</a>        </li>
-          <li class="header-nav-item">
-            <a class="header-nav-link" href="https://gist.github.com/" data-ga-click="Header, go to gist, text:gist">Gist</a>
-          </li>
-      </ul>
-
-    
-<ul class="header-nav user-nav right" id="user-links">
-  <li class="header-nav-item">
-      <span class="js-socket-channel js-updatable-content"
-        data-channel="notification-changed:bfrost92"
-        data-url="/notifications/header">
-      <a href="/notifications" aria-label="You have no unread notifications" class="header-nav-link notification-indicator tooltipped tooltipped-s" data-ga-click="Header, go to notifications, icon:read" data-hotkey="g n">
-          <span class="mail-status all-read"></span>
-          <span aria-hidden="true" class="octicon octicon-bell"></span>
-</a>  </span>
-
-  </li>
-
-  <li class="header-nav-item dropdown js-menu-container">
-    <a class="header-nav-link tooltipped tooltipped-s js-menu-target" href="/new"
-       aria-label="Create new…"
-       data-ga-click="Header, create new, icon:add">
-      <span aria-hidden="true" class="octicon octicon-plus left"></span>
-      <span class="dropdown-caret"></span>
-    </a>
-
-    <div class="dropdown-menu-content js-menu-content">
-      <ul class="dropdown-menu dropdown-menu-sw">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>GETTING STARTED WITH BRACKETS</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
         
-<a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
-  New repository
-</a>
-
-
-  <a class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
-    New organization
-  </a>
-
-
-
-
-      </ul>
-    </div>
-  </li>
-
-  <li class="header-nav-item dropdown js-menu-container">
-    <a class="header-nav-link name tooltipped tooltipped-sw js-menu-target" href="/bfrost92"
-       aria-label="View profile and more"
-       data-ga-click="Header, show menu, icon:avatar">
-      <img alt="@bfrost92" class="avatar" height="20" src="https://avatars2.githubusercontent.com/u/6675054?v=3&amp;s=40" width="20" />
-      <span class="dropdown-caret"></span>
-    </a>
-
-    <div class="dropdown-menu-content js-menu-content">
-      <div class="dropdown-menu  dropdown-menu-sw">
-        <div class=" dropdown-header header-nav-current-user css-truncate">
-            Signed in as <strong class="css-truncate-target">bfrost92</strong>
-
-        </div>
-
-
-        <div class="dropdown-divider"></div>
-
-          <a class="dropdown-item" href="/bfrost92" data-ga-click="Header, go to profile, text:your profile">
-            Your profile
-          </a>
-        <a class="dropdown-item" href="/stars" data-ga-click="Header, go to starred repos, text:your stars">
-          Your stars
+        <h1>GETTING STARTED WITH BRACKETS</h1>
+        <h2>This is your guide!</h2>
+        
+        <!--
+            MADE WITH <3 AND JAVASCRIPT
+        -->
+        
+        <p>
+            Welcome to Brackets, a modern open-source code editor that understands web design. It's a lightweight,
+            yet powerful, code editor that blends visual tools into the editor so you get the right amount of help
+            when you want it.
+        </p>
+        
+        <!--
+            WHAT IS BRACKETS?
+        -->
+        <p>
+            <em>Brackets is a different type of editor.</em>
+            Brackets has some unique features like Quick Edit, Live Preview and others that you may not find in other
+            editors. And Brackets is written in JavaScript, HTML and CSS. That means that most of you using Brackets
+            have the skills necessary to modify and extend the editor. In fact, we use Brackets every day to build
+            Brackets. To learn more about how to use the key features, read on.
+        </p>
+        
+        <!--
+            GET STARTED WITH YOUR OWN FILES
+        -->
+        
+        <h3>Projects in Brackets</h3>
+        <p>
+            In order to edit your own code using Brackets, you can just open the folder containing your files.
+            Brackets treats the currently open folder as a "project"; features like Code Hints, Live Preview and
+            Quick Edit only use files within the currently open folder.
+        </p>
+        
+        <samp>
+            Once you're ready to get out of this sample project and edit your own code, you can use the dropdown
+            in the left sidebar to switch folders. Right now, the dropdown says "Getting Started" - that's the
+            folder containing the file you're looking at right now. Click on the dropdown and choose "Open Folder…"
+            to open your own folder.
+            You can also use the dropdown later to switch back to folders you've opened previously, including this
+            sample project.
+        </samp>
+        
+        <!--
+            THE RELATIONSHIP BETWEEN HTML, CSS AND JAVASCRIPT
+        -->
+        <h3>Quick Edit for CSS and JavaScript</h3>
+        <p>
+            No more switching between documents and losing your context. When editing HTML, use the
+            <kbd>Cmd/Ctrl + E</kbd> shortcut to open a quick inline editor that displays all the related CSS.
+            Make a tweak to your CSS, hit <kbd>ESC</kbd> and you're back to editing HTML, or just leave the
+            CSS rules open and they'll become part of your HTML editor. If you hit <kbd>ESC</kbd> outside of
+            a quick inline editor, they'll all collapse. Quick Edit will also find rules defined in LESS and
+            SCSS files, including nested rules.
+        </p>
+        
+        <samp>
+            Want to see it in action? Place your cursor on the <!-- <samp> --> tag above and press
+            <kbd>Cmd/Ctrl + E</kbd>. You should see a CSS quick editor appear above, showing the CSS rule that
+            applies to it. Quick Edit works in class and id attributes as well. You can use it with your
+            LESS and SCSS files also.
+            
+            You can create new rules the same way. Click in one of the <!-- <p> --> tags above and press
+            <kbd>Cmd/Ctrl + E</kbd>. There are no rules for it right now, but you can click the New Rule
+            button to add a new rule for <!-- <p> -->.
+        </samp>
+        
+        <a href="screenshots/quick-edit.png">
+            <img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
         </a>
-        <a class="dropdown-item" href="/explore" data-ga-click="Header, go to explore, text:explore">
-          Explore
-        </a>
-          <a class="dropdown-item" href="/integrations" data-ga-click="Header, go to integrations, text:integrations">
-            Integrations
-          </a>
-        <a class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">
-          Help
-        </a>
-
-          <div class="dropdown-divider"></div>
-
-          <a class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">
-            Settings
-          </a>
-
-          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/logout" class="logout-form" data-form-nonce="5856e065c55725b5e5f0504738767101dc988f6e" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="zJNcU+uTtVPNpVfwDmvRbqtwRK++2syIcy3Mk0kfnU9Oo7DrEWqDjIEaHzafmVVgmqyPyrR8timUiYeLnJUMMA==" /></div>
-            <button class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
-              Sign out
-            </button>
-</form>
-      </div>
-    </div>
-  </li>
-</ul>
-
-
-    
-  </div>
-</div>
-
-      
-
-      
-
-
-    <div id="start-of-content" class="accessibility-aid"></div>
-
-      <div id="js-flash-container">
-</div>
-
-
-    <div role="main" class="main-content">
-
-        <div id="js-pjax-container" class="context-loader-container" data-pjax-container>
-          
-<div class="page-content container">
-  <div class="columns">
-    
-<div class="column one-fourth" role="navigation">
-  <nav class="menu" data-pjax>
-    <h3 class="menu-heading">
-      Personal settings
-    </h3>
-
-    <a href="/settings/profile" class="js-selected-navigation-item menu-item" data-selected-links="avatar_settings /settings/profile">Profile</a>
-    <a href="/settings/admin" class="js-selected-navigation-item menu-item" data-selected-links=" /settings/admin">Account settings</a>
-
-
-    <a href="/settings/emails" class="js-selected-navigation-item menu-item" data-selected-links=" /settings/emails">
-      Emails
-</a>
-    <a href="/settings/notifications" class="js-selected-navigation-item menu-item" data-selected-links=" /settings/notifications">Notification center</a>
-
-      <a href="/settings/billing" class="js-selected-navigation-item menu-item" data-selected-links="user_billing_settings /settings/billing">Billing</a>
-
-    <a href="/settings/ssh" aria-selected="true" class="js-selected-navigation-item selected menu-item" data-selected-links=" /settings/ssh">SSH keys</a>
-
-      <a href="/settings/security" class="js-selected-navigation-item menu-item" data-selected-links=" /settings/security">Security</a>
-
-    <a href="/settings/applications" class="js-selected-navigation-item menu-item" data-selected-links="applications_settings settings_user_authorized_apps settings_user_developer_applications settings_user_integrations /settings/applications">Applications</a>
-    <a href="/settings/tokens" class="js-selected-navigation-item menu-item" data-selected-links="oauth_tokens /settings/tokens">Personal access tokens</a>
-    <a href="/settings/repositories" class="js-selected-navigation-item menu-item" data-selected-links=" /settings/repositories">Repositories</a>
-    <a href="/settings/organizations" class="js-selected-navigation-item menu-item" data-selected-links=" /settings/organizations">Organizations</a>
-  </nav>
-
-</div>
-
-
-    <div class="column three-fourths">
-      <div class="context-loader large-format-loader">
-  <p><img alt="" height="64" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-128.gif" width="64" /></p>
-  <p>Loading…</p>
-</div>
-
-      
-<p><strong>Need help?</strong> Check out our guide to <a href="https://help.github.com/articles/generating-ssh-keys">generating SSH keys</a> or troubleshoot <a href="https://help.github.com/ssh-issues/">common SSH Problems</a></p>
-<div class="boxed-group js-ssh-keys-box">
-  <a href="#"
-     id="add_key_action"
-     
-     class="js-show-new-ssh-key-form btn btn-sm boxed-group-action ">
-    Add SSH key
-  </a>
-
-  <h3>SSH keys</h3>
-
-  <div class="boxed-group-inner">
-      <p>
-        This is a list of SSH keys associated with your account.
-          Remove any keys that you do not recognize.
-      </p>
-      <ul class="boxed-group-list">
-          <li class="ssh-key">
-
-    <span class="ssh-key-state-indicator not-recent"></span>
-
-    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/account/public_keys/7065770" class="js-remove-key" data-form-nonce="5856e065c55725b5e5f0504738767101dc988f6e" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="delete" /><input name="authenticity_token" type="hidden" value="mhMFqhSkqp1qoTpTnsFG9WMBO5J9fCL3nug1tmttC3nAMya/EgiMq5yz1aRFxpcqvd1mi17wSr7pV9SoAB0lNg==" /></div>
-      <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-</form>
-  <span class="ssh-key-icon"><span aria-hidden="true" class="mega-octicon octicon-key"></span></span>
-
-  <div class="ssh-key-details js-details-container">
-    <strong class="ssh-key-title">
-      GitHub for Windows - HP-PC
-    </strong>
-    <code class="ssh-key-fingerprint">e7:75:ce:66:f5:7f:47:d4:2b:ac:14:2e:5b:9c:9e:0c</code>
-    <small class="ssh-key-accessed">
-      Added on <time datetime="2014-02-13T22:28:02Z" day="numeric" is="local-time" month="short" year="numeric">Feb 13, 2014</time> by <strong>GitHub for Windows</strong> — 
-      <span aria-label="No activity has been logged since key logging began on March 05, 2014" class="tooltipped tooltipped-se"><span aria-hidden="true" class="octicon octicon-info"></span></span> No recent activity
-      
-    </small>
-  </div>
-</li>
-
-          <li class="ssh-key">
-
-    <span class="ssh-key-state-indicator not-recent"></span>
-
-    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/account/public_keys/15377580" class="js-remove-key" data-form-nonce="5856e065c55725b5e5f0504738767101dc988f6e" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="delete" /><input name="authenticity_token" type="hidden" value="/ohD4+vTR21SfaJ2S0WgFM80Y/wqYqcJBIxLc1VZbl0rqPOiLkNyktyCQWogi89+mrptR9jInWjNqw68soTWeg==" /></div>
-      <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-</form>
-  <span class="ssh-key-icon"><span aria-hidden="true" class="mega-octicon octicon-key"></span></span>
-
-  <div class="ssh-key-details js-details-container">
-    <strong class="ssh-key-title">
-      key
-    </strong>
-    <code class="ssh-key-fingerprint">13:91:aa:c5:20:12:5e:7e:21:5c:91:ce:6c:88:91:40</code>
-    <small class="ssh-key-accessed">
-      Added on <time datetime="2016-01-16T17:32:08Z" day="numeric" is="local-time" month="short" year="numeric">Jan 16, 2016</time> — 
-      Never used
-      
-    </small>
-  </div>
-</li>
-
-      </ul>
-
-    <div class="js-no-ssh-keys" style="display:none">
-      <p>There are no SSH keys with access to your account.</p>
-    </div>
-
-  </div>
-</div>
-
-<div class="boxed-group js-new-ssh-key-box" style="display:none">
-  <h3>Add an SSH key</h3>
-  <div class="boxed-group-inner">
-    <div id="new_key_form_wrap" class="body">
-    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/account/public_keys" class="new_public_key" data-form-nonce="5856e065c55725b5e5f0504738767101dc988f6e" id="new_key" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="jCgBuS13UaYb1QjZG6JDIn/+s8qx2nQhFC8WXcjqOD1DOanMkQ0KwRTpdfHn9vDxWg6+Mbbld6Pm6Jh8dGEpng==" /></div>
-      
-  <dl class="form">
-    <dt><label for="public_key_title">Title</label></dt>
-    <dd><input class="js-ssh-key-title" id="public_key_title" name="public_key[title]" size="30" type="text" /></dd>
-  </dl>
-  <dl class="form">
-    <dt><label for="public_key_key">Key</label></dt>
-    <dd><textarea class="key_value" cols="40" id="public_key_key" name="public_key[key]" rows="20">
-</textarea></dd>
-  </dl>
-
-      <p>
-        <button type="submit" class="btn btn-primary">Add key</button>
-      </p>
-</form>    </div>
-  </div>
-</div>
-
-
-    </div>
-  </div>
-</div>
-
-
-        </div>
-        <div class="modal-backdrop"></div>
-    </div>
-
-        <div class="container">
-  <div class="site-footer" role="contentinfo">
-    <ul class="site-footer-links right">
-        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
-      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
-      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
-      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
-        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
-        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
-        <li><a href="https://github.com/pricing" data-ga-click="Footer, go to pricing, text:pricing">Pricing</a></li>
-
-    </ul>
-
-    <a href="https://github.com" aria-label="Homepage">
-      <span aria-hidden="true" class="mega-octicon octicon-mark-github" title="GitHub "></span>
-</a>
-    <ul class="site-footer-links">
-      <li>&copy; 2016 <span title="0.03248s from github-fe122-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
-        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
-        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
-        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
-        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
-        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
-    </ul>
-  </div>
-</div>
-
-
-
-    
-    
-    
-
-    <div id="ajax-error-message" class="flash flash-error">
-      <span aria-hidden="true" class="octicon octicon-alert"></span>
-      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
-        <span aria-hidden="true" class="octicon octicon-x"></span>
-      </button>
-      Something went wrong with that request. Please try again.
-    </div>
-
-
-      <script crossorigin="anonymous" integrity="sha256-KJVHXHFPE3kLY+Y2tTiaaRiiYCWcWyKhWs9e8mvW7wk=" src="https://assets-cdn.github.com/assets/frameworks-2895475c714f13790b63e636b5389a6918a260259c5b22a15acf5ef26bd6ef09.js"></script>
-      <script async="async" crossorigin="anonymous" integrity="sha256-wEBGCKO80TEHdt8Ksm4Qe/1w/wOCQI9D7eGoHnMOOc0=" src="https://assets-cdn.github.com/assets/github-c0404608a3bcd1310776df0ab26e107bfd70ff0382408f43ede1a81e730e39cd.js"></script>
-      
-      
-      
-    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner hidden">
-      <span aria-hidden="true" class="octicon octicon-alert"></span>
-      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
-      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
-    </div>
-    <div class="facebox" id="facebox" style="display:none;">
-  <div class="facebox-popup">
-    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
-    </div>
-    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
-      <span aria-hidden="true" class="octicon octicon-x"></span>
-    </button>
-  </div>
-</div>
-
-  </body>
+        
+        <p>
+            You can use the same shortcut to edit other things as well - like functions in JavaScript,
+            colors, and animation timing functions - and we're adding more and more all the time.
+        </p>
+        <p>
+            For now inline editors cannot be nested, so you can only use Quick Edit while the cursor
+            is in a "full size" editor.
+        </p>
+        
+        <!--
+            LIVE PREVIEW
+        -->
+        <h3>Preview HTML and CSS changes live in the browser</h3>
+        <p>
+            You know that "save/reload dance" we've been doing for years? The one where you make changes in
+            your editor, hit save, switch to the browser and then refresh to finally see the result?
+            With Brackets, you don't have to do that dance.
+        </p>
+        <p>
+            Brackets will open a <em>live connection</em> to your local browser and push HTML and CSS updates as you
+            type! You might already be doing something like this today with browser-based tools, but with Brackets
+            there is no need to copy and paste the final code back into the editor. Your code runs in the
+            browser, but lives in your editor!
+        </p>
+        
+        <h3>Live Highlight HTML elements and CSS rules</h3>
+        <p>
+            Brackets makes it easy to see how your changes in HTML and CSS will affect the page. When your cursor
+            is on a CSS rule, Brackets will highlight all affected elements in the browser. Similarly, when editing
+            an HTML file, Brackets will highlight the corresponding HTML elements in the browser.
+        </p>
+        
+        <samp>
+            If you have Google Chrome installed, you can try this out yourself. Click on the lightning bolt
+            icon in the top right corner of your Brackets window or hit <kbd>Cmd/Ctrl + Alt + P</kbd>. When
+            Live Preview is enabled on an HTML document, all linked CSS documents can be edited in real-time.
+            The icon will change from gray to gold when Brackets establishes a connection to your browser.
+            
+            Now, place your cursor on the <!-- <img> --> tag above. Notice the blue highlight that appears
+            around the image in Chrome. Next, use <kbd>Cmd/Ctrl + E</kbd> to open up the defined CSS rules.
+            Try changing the size of the border from 10px to 20px or change the background
+            color from "transparent" to "hotpink". If you have Brackets and your browser running side-by-side, you
+            will see your changes instantly reflected in your browser. Cool, right?
+        </samp>
+        
+        <p class="note">
+            Today, Brackets only supports Live Preview for HTML and CSS. However, in the current version, changes to
+            JavaScript files are automatically reloaded when you save. We are currently working on Live Preview
+            support for JavaScript. Live previews are also only possible with Google Chrome, but we hope
+            to bring this functionality to all major browsers in the future.
+        </p>
+        
+        <h3>Quick View</h3>
+        <p>
+            For those of us who haven't yet memorized the color equivalents for HEX or RGB values, Brackets makes
+            it quick and easy to see exactly what color is being used. In either CSS or HTML, simply hover over any
+            color value or gradient and Brackets will display a preview of that color/gradient automatically. The
+            same goes for images: simply hover over the image link in the Brackets editor and it will display a
+            thumbnail preview of that image.
+        </p>
+        
+        <samp>
+            To try out Quick View for yourself, place your cursor on the <!-- <body> --> tag at the top of this
+            document and press <kbd>Cmd/Ctrl + E</kbd> to open a CSS quick editor. Now simply hover over any of the
+            color values within the CSS. You can also see it in action on gradients by opening a CSS quick editor
+            on the <!-- <html> --> tag and hovering over any of the background image values. To try out the image
+            preview, place your cursor over the screenshot image included earlier in this document.
+        </samp>
+        
+        <h3>Need something else? Try an extension!</h3>
+        <p>
+            In addition to all the goodness that's built into Brackets, our large and growing community of
+            extension developers has built hundreds of extensions that add useful functionality. If there's
+            something you need that Brackets doesn't offer, more than likely someone has built an extension for
+            it. To browse or search the list of available extensions, choose <strong>File > Extension
+            Manager…</strong> and click on the "Available" tab. When you find an extension you want, just click
+            the "Install" button next to it.
+        </p>
+        
+        <!--
+            LET US KNOW WHAT YOU THINK
+        -->
+        <h2>Get involved</h2>
+        <p>
+            Brackets is an open-source project. Web developers from around the world are contributing to build
+            a better code editor. Many more are building extensions that expand the capabilities of Brackets.
+            Let us know what you think, share your ideas or contribute directly to the project.
+        </p>
+        <ul>
+            <li><a href="http://brackets.io">Brackets.io</a></li>
+            <li><a href="http://blog.brackets.io">Brackets Team Blog</a></li>
+            <li><a href="https://github.com/adobe/brackets">Brackets on GitHub</a></li>
+            <li><a href="https://brackets-registry.aboutweb.com">Brackets Extension Registry</a></li>
+            <li><a href="https://github.com/adobe/brackets/wiki">Brackets Wiki</a></li>
+            <li><a href="https://groups.google.com/forum/#!forum/brackets-dev">Brackets Developer Mailing List</a></li>
+            <li><a href="https://twitter.com/brackets">@brackets on Twitter</a></li>
+            <li>Chat with Brackets developers on IRC in <a href="http://webchat.freenode.net/?channels=brackets&uio=d4">#brackets on Freenode</a></li>
+        </ul>
+        
+    </body>
 </html>
